@@ -99,19 +99,37 @@ const About = () => {
             <CopyEmailButton />
           </div>
         </div>
-        {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="headText mb-0 md:mb-8">Tech Stack</p>
+{/* Grid 5 - Desktop Layout */}
+<div className="grid-default-color grid-5 hidden md:flex items-start justify-between gap-6">
+   <div className="z-10 w-[50%]">
+            <p className="headText mb-0 ">Tech Stack</p>
             <p className="subtext">
-              I build full-stack applications using the MERN stack, write efficient code in C++ and have a strong grasp of DSA, system design, and core CS: (OS, DBMS, Computer networks and Computer Organisation).
+            I develop full-stack applications using the MERN stack and write efficient code in C++, C, and JavaScript. I have a strong grip on data structures and algorithms, backed by a solid foundation in core CS subjects like Operating Systems, DBMS, Computer Networks, and Computer Organization. I'm also well-versed in system design, from low-level internals to high-level scalable architectures.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
             <Frameworks />
           </div>
         </div>
-      </div>
+
+{/* Grid 5 - Mobile Layout */}
+<div className="grid-default-color grid-5 flex flex-row gap-4 items-start md:hidden px-4">
+  {/* Text Section - 70% */}
+  <div className="w-[70%]">
+    <p className="headText mb-4">Tech Stack</p>
+    <p className="subtext">
+      I build full-stack applications using the MERN stack, write efficient code in C++ and have a strong grasp of DSA, system design, and core CS: (OS, DBMS, Computer Networks and Computer Organisation).
+    </p>
+  </div>
+
+  {/* Animation Section - 30% */}
+  <div className="w-[30%] flex justify-center translate-x-32 translate-y-[-7%]" >
+    <div className="w-full scale-100">
+      <Frameworks />
+    </div>
+  </div>
+</div>
+</div>
     </section>
   );
 };
