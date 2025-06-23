@@ -27,9 +27,12 @@ const TypingText = () => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="font-mono whitespace-pre-line leading-relaxed">
+    <div
+      ref={ref}
+      className="font-mono whitespace-pre-line leading-relaxed flex flex-col items-start justify-start"
+    >
       {stage === "typingFunction" && (
-        <div className="text-2xl text-green-400">
+        <div className="text-sm text-green-400">
           <Typewriter
             key={`function-${key}`}
             options={{
@@ -47,7 +50,7 @@ const TypingText = () => {
       )}
 
       {stage === "typingGoals" && (
-        <div className="text-sm text-green-400 mt-4">
+        <div className="text-xs text-green-400 mt-0">
           <Typewriter
             key={`goals-${key}`}
             options={{
