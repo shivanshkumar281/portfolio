@@ -8,6 +8,9 @@ To add project: Go to: src/constants/index.js and add projects by un-commenting 
 
 To add work experience:  Go to: src/constants/index.js and add work experience by un-commenting them.
 
+To add under Goals and Objectives: For desktop version: go to src/components/TypingTextDesktop.jsx and add content.
+For mobile version: go to src/components/TypingText.jsx and add content.
+
 To upload updated portfolio:
 step-1: update files locally.
 step-2: go to root directory of portfolio

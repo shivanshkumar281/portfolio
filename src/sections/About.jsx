@@ -3,6 +3,9 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
+import Typewriter from 'typewriter-effect';
+import TypingText from "../components/TypingText";
+import TypingTextDesktop from "../components/TypingTextDesktop";
 
 const About = () => {
   const grid2Container = useRef();
@@ -24,57 +27,23 @@ const About = () => {
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
-        {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
-          <div
-            ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <p className="flex items-end text-5xl text-gray-500">
-              CODE IS CRAFT
-            </p>
-            <Card
-              style={{ rotate: "-25deg", top: "30%", left: "40%" }}
-              text="Core CS"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="System Design"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Web Dev"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="DSA"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "5deg", top: "5%", left: "40%" }}
-              text="Problem Solving"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/c++.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/mern.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/git.png"
-              containerRef={grid2Container}
-            />
-          </div>
-        </div>
+{/* Grid 2 - Desktop Layout */}
+<div className="grid-default-color grid-2 hidden md:flex items-start justify-center px-4 py-6">
+  <div className="text-left max-w-xl w-full">
+    <p className="headText mb-4">Goals & Ambitions</p>
+    <TypingTextDesktop />
+  </div>
+</div>
+
+{/* Grid 2 - Mobile Layout */}
+<div className="grid-default-color grid-2 flex md:hidden flex-col items-start justify-start px-4 py-6">
+  <div className="w-full">
+    <p className="headText mb-4">Goals & Ambitions</p>
+    <TypingText />
+  </div>
+</div>
+
+
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
@@ -116,7 +85,7 @@ const About = () => {
 <div className="grid-default-color grid-5 flex flex-row gap-4 items-start md:hidden px-4">
   {/* Text Section - 70% */}
   <div className="w-[70%]">
-    <p className="headText mb-4">Tech Stack</p>
+    <p className="headText mb-0">Tech Stack</p>
     <p className="subtext">
       I build full-stack applications using the MERN stack, write efficient code in C++ and have a strong grasp of DSA, system design, and core CS: (OS, DBMS, Computer Networks and Computer Organisation).
     </p>
