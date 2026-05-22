@@ -31,14 +31,24 @@ const Navbar = () => {
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+        <div className="flex items-center justify-between gap-4 py-2 sm:py-0">
 <a
   href="/"
-  className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+  className="text-xl font-bold transition-colors text-neutral-400 hover:text-white whitespace-nowrap"
 >
-  {/* Desktop version */}
-  <span className="hidden sm:inline">
-    Shivansh Kumar | M.Tech CSE, Indian Institute of Technology Patna
+  {/* Extra-wide desktop version */}
+  <span className="hidden xl:inline">
+    Shivansh Kumar | SWE Intern @ Warner Bros. Discovery | IIT Patna
+  </span>
+
+  {/* Mid desktop version */}
+  <span className="hidden md:inline xl:hidden">
+    Shivansh Kumar | SWE @ Warner Bros. Discovery
+  </span>
+
+  {/* Tablet version */}
+  <span className="hidden sm:inline md:hidden">
+    Shivansh Kumar | SWE @ WBD
   </span>
 
   {/* Mobile version */}

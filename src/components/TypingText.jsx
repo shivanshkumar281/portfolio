@@ -62,10 +62,10 @@ const TypingText = () => {
             }}
             onInit={(typewriter) => {
               typewriter
-                .typeString("→ To work on real-world impactful projects.\n")
-                .typeString("→ To master full-stack development and system-level understanding.\n")
-                .typeString("→ To contribute to scalable and elegant architectures.\n")
-                .typeString("→ To continuously learn, grow, and build meaningful solutions.")
+                .typeString("→ Ship production backends in Go / Python on GCP.\n")
+                .typeString("→ Master distributed systems and system design.\n")
+                .typeString("→ Sharpen DSA through deliberate practice.\n")
+                .typeString("→ Build performant, reliable, secure software.")
                 .start();
             }}
           />

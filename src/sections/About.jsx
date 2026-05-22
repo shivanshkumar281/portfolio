@@ -22,7 +22,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Shivansh Kumar</p>
             <p className="subtext">
-              I completed my M.Tech in Computer Science from IIT Patna, with a focus on full-stack development and system design.
+              Software Engineer Intern at Warner Bros. Discovery (CaptionAI / CDL Data Platform) and M.Tech CSE candidate at IIT Patna, building production Go microservices on Google Cloud (Cloud Run, Pub/Sub, Cloud SQL, GCS, BigQuery, IAM).
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -73,7 +73,7 @@ const About = () => {
    <div className="z-10 w-[50%]">
             <p className="headText mb-0 ">Tech Stack</p>
             <p className="subtext">
-            I develop full-stack applications using the MERN stack and write efficient code in C++, C, and JavaScript. I have a strong grip on data structures and algorithms, backed by a solid foundation in core CS subjects like Operating Systems, DBMS, Computer Networks, and Computer Organization. I'm also well-versed in system design, from low-level internals to high-level scalable architectures.
+            Backend engineer in Go and Python on Google Cloud (Cloud Run, Pub/Sub, Cloud SQL, GCS, BigQuery, IAM), focused on reliable data pipelines, IAM-hardened access, and operational tooling. Full-stack delivery with the MERN stack and Tailwind, plus C++, DSA, and a solid base in OS, DBMS, Computer Networks, and system design fundamentals.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
@@ -87,7 +87,7 @@ const About = () => {
   <div className="w-[70%]">
     <p className="headText mb-0">Tech Stack</p>
     <p className="subtext">
-      I build full-stack applications using the MERN stack, write efficient code in C++ and have a strong grasp of DSA, system design, and core CS: (OS, DBMS, Computer Networks and Computer Organisation).
+      Go / Python backend on GCP (Cloud Run, Pub/Sub, Cloud SQL), full-stack MERN, C++ and DSA, plus core CS: OS, DBMS, Networks, and system design.
     </p>
   </div>
 

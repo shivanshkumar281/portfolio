@@ -1,279 +1,130 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Grocery Delivery Platform",
+    title: "Adaptive Hashing — AI-Enhanced File Integrity Monitoring",
     description:
-      "Developed a responsive user interface with React.js and Tailwind CSS for browsing groceries, placing orders, and seamless user experience.",
+      "M.Tech thesis at IIT Patna (Research Paper Submitted): a host-based File Integrity Monitoring (FIM) agent that replaces O(N) periodic full-scan hashing with an O(K) event-driven streaming-hash pipeline, projected at a 2,000x reduction in hash computations and sub-5 second detection on a 10M-file server.",
     subDescription: [
-      "Built a secure admin panel with dynamic product management and integrated Stripe for online payments.",
-      "Designed RESTful APIs with Node.js and Express.js for user, order, and product operations.",
-      "Used MongoDB for backend storage and deployed the application on Vercel for public access.",
-],
-    href: "https://www.youtube.com",
+      "Architected an event-driven pipeline: inotify / FSEvents / ReadDirectoryChangesW -> metadata filter -> streaming SHA-256 -> Isolation Forest anomaly classifier on 12 behavioral features.",
+      "Designed an adaptive hashing strategy that processes only changed files, achieving ~50MB constant memory footprint independent of total file count on the monitored server.",
+      "Trained an Isolation Forest model on temporal, structural, and behavioral features to flag stealth tampering and defeat timestomping attacks (MITRE ATT&CK T1070.006).",
+      "Built the prototype in Python (asyncio) with the watchdog library, scikit-learn for ML inference, and PostgreSQL for event/state persistence.",
+    ],
+    href: "https://github.com/shivanshkumar281",
+    logo: "",
+    image: "/assets/projects/adaptive-hashing.svg",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.svg",
+      },
+      {
+        id: 2,
+        name: "scikit-learn",
+        path: "/assets/logos/python.svg",
+      },
+      {
+        id: 3,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
+      {
+        id: 4,
+        name: "SHA-256",
+        path: "/assets/logos/git.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Grocery Delivery E-Commerce Platform",
+    description:
+      "Full-stack MERN e-commerce platform with a responsive React + Tailwind storefront, admin and seller portals, Node/Express REST APIs over MongoDB, and Stripe payment integration. Deployed on Vercel.",
+    subDescription: [
+      "Developed a responsive React.js + Tailwind CSS storefront with product browsing, cart, ordering, and a seamless checkout user experience.",
+      "Built a secure admin and seller portal with dynamic product management and Stripe-based online payments.",
+      "Designed Node.js / Express.js RESTful APIs for users, orders, and products, backed by MongoDB for persistent storage.",
+      "Containerized the build and deployed the application on Vercel for public access.",
+    ],
+    href: "https://github.com/shivanshkumar281/grocery-ecommerce-app",
     logo: "",
     image: "/assets/projects/freshcart.jpg",
     tags: [
       {
         id: 1,
         name: "MongoDB",
-        path: "/assets/logos/mongodb.jpg",
+        path: "/assets/logos/mongodb.svg",
       },
       {
         id: 2,
-        name: "ExpressJS",
-        path: "/assets/logos/express.jpg",
+        name: "Express.js",
+        path: "/assets/logos/nodejs.svg",
       },
       {
         id: 3,
-        name: "ReactJS",
-        path: "/assets/logos/efcore.png",
+        name: "React.js",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 4,
-        name: "NodeJS",
-        path: "/assets/logos/nodejs.jpg",
-      },  
-    ],
-  },
-  {
-    id: 2,
-    title: "Music Streaming Web App (Spotify Clone)",
-    description:
-      "Built a full-featured music streaming web application using the MERN stack, including a user-facing frontend, admin panel, and secure backend.",
-    subDescription: [
-      "Designed and developed an admin panel for uploading and managing songs, albums, and media assets.",
-      "Integrated Cloudinary API for efficient audio/image storage and retrieval, enhancing performance.",
-      "Implemented responsive UI with React.js and built scalable backend APIs using Express.js and MongoDB.",
-    ],
-    href: "https://www.google.co.in",
-    logo: "",
-    image: "/assets/projects/spotify.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "MongoDB",
-        path: "/assets/logos/mongodb.jpg",
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
       },
       {
-        id: 2,
-        name: "ExpressJS",
-        path: "/assets/logos/express.jpg",
-      },
-      {
-        id: 3,
-        name: "ReactJS",
-        path: "/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
-        name: "NodeJS",
-        path: "/assets/logos/nodejs.jpg",
-      },  
-    ],
-  },
-   /* <--- remove this to add contents below{
-    id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },and also remove this---> */
-   /* <--- remove this to add contents below{
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
-    ],
-  },and also remove this---> */
-   /* <--- remove this to add contents below{
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },      and also remove this---> */
-   /* <--- remove this to add contents below{
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
+        id: 5,
         name: "Stripe",
         path: "/assets/logos/stripe.svg",
       },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
     ],
-  }, and also remove this---> */
+  },
 ];
 
 export const mySocials = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/shivanshkumar281",
+    icon: "/assets/socials/linkedIn.svg",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/shivanshkumar281",
+    icon: "/assets/logos/github.svg",
+  },
   {
     name: "WhatsApp",
     href: "https://wa.me/918860669917",
     icon: "/assets/socials/whatsApp.svg",
   },
-  {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/shivanshkumar281",
-    icon: "/assets/socials/linkedIn.svg",
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/shivansh_kr._/",
-    icon: "/assets/socials/instagram.svg",
-  },
 ];
 
 export const experiences = [
   {
-    title: "Web Dev Intern",
-    job: "Herbal Canada",
-    date: "June 2025- August 2025",
+    title: "Software Engineer Intern",
+    job: "Warner Bros. Discovery — CaptionAI / CDL Data Platform",
+    date: "Sep 2025 — Jul 2026",
     contents: [
-      "Independently developed the official company website for Herbal Canada using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
-      "Designed and implemented the frontend in React.js, ensuring responsive layout and user-friendly navigation.",
-      "Built backend APIs using Node.js and Express.js to manage product listings and user interactions.",
-      "Integrated MongoDB for storing dynamic data such as product inventory and customer details.",
-      "Gained practical experience in deploying and managing a live website for a real-world business.",
+      "Architected and shipped end-to-end MD5 checksum verification across three production S3 <-> GCS transport boundaries in Go microservices via streaming io.TeeReader pipelines — eliminated a tamper-detection gap on 100% of caption/translation asset transfers and reduced peak memory from 500MB+ to a constant ~8KB.",
+      "Engineered a reusable Proto-Field Validation framework with a source-language consistency rule across three Go ingest microservices — patched a proto3-optional pointer-nil presence-check defect spanning 3 code paths and added DB-side prerequisite validation that prevents malformed translation requests from triggering orphaned Airflow DAG runs downstream.",
+      "Architected and launched a containerized Operational Tools platform migrating 25+ legacy maintenance scripts off shared VMs onto IAM-isolated Cloud Run Jobs with per-tool service accounts, column-level Cloud SQL grants, and just-in-time Privileged Access Manager-gated production execution — eliminated 100% of standing engineer access to production databases via a code-reviewed, audited execution model.",
+      "Delivered EMT translation pipeline features in Go across gcp-ingest and gcp-delivery microservices (demand routing, v3 multi-file delivery, status flows, producer=MERLIN tagging across V1/V2); shipped non-inventory feedback support for Scripting/EMT/Translation (new schema, validators, status routing).",
+      "Automated operational reliability: migrated Cloud SQL Proxy to a security-hardened image; built a 16-step Python data-reconciliation backfill (parallel GCS scans, batched idempotent inserts, dry-run + snapshots) reconciling 5 PostgreSQL tables across DEV/INT/PROD; engineered a cross-VPC private-IP schema-diff CLI; integrated Slack alerting.",
+      "Owned end-to-end development of Merlin UI (Python/Taipy internal tool used daily by Global Content Operations for AI captioning/translation/scripting workflows on WBD's streaming catalog): shipped Translation/EMT feedback pages, bulk-GCS-URI upload, journey-completion notifications; designed and launched two business-facing Looker dashboards (LookML) with GT-vs-ML quality splits.",
     ],
   },
   {
-    title: "Teaching Assistant (GATE – CSE)",
-    job: "Dazzling Career GATE coaching",
-    date: "2024-2025",
+    title: "Teaching Assistant (GATE — CSE)",
+    job: "Dazzling Career GATE Coaching",
+    date: "2024 — 2025",
     contents: [
-      "Conducted doubt-solving sessions for GATE Computer Science aspirants, focusing on core subjects like Data Structures, Algorithms, OS, DBMS, and Networks.",
-      "Created and delivered video-recorded solutions for previous 15 years of GATE CSE questions, explaining problem-solving strategies and key concepts.",
+      "Conducted doubt-solving sessions for GATE Computer Science aspirants on Data Structures, Algorithms, OS, DBMS, and Computer Networks.",
+      "Created and delivered video-recorded solutions for 15 years of GATE CSE previous year questions, breaking down problem-solving strategies and core concepts.",
+      "Designed personalized preparation strategies for aspirants based on their progress, strengths, and remaining time to the exam.",
       "Helped students build conceptual clarity and exam readiness through targeted discussions and analytical approaches.",
-      "Designed and delivered personalized preparation strategies for aspirants based on their progress, strengths, and remaining preparation time.",
-      "Reviewed and corrected ineffective study plans, helping students optimize their time and focus on high-yield topics.",
     ],
   },
-  /*  <--- remove this to add experience  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
-    ],
-  }, also remove this ---->*/
 ];
+
 export const reviews = [
   {
     name: "Jack",

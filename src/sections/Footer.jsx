@@ -11,7 +11,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>© 2025 Shivansh. All rights reserved.</p>
+      <p>© 2026 Shivansh Kumar. All rights reserved.</p>
     </section>
   );
 };

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Adaptive Hashing Architecture Diagram">
+  <title>Adaptive Hashing &#8212; Event-Driven File Integrity Monitoring</title>
+  <desc>Pipeline: filesystem events to metadata filter to streaming SHA-256 to Isolation Forest anomaly detector, persisting to a PostgreSQL event store.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a1f"/>
+      <stop offset="55%" stop-color="#120e2c"/>
+      <stop offset="100%" stop-color="#1c0e36"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f1b3f" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#13102b" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="cardAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1f4d" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#1a0f36" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="dbCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a44" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.96"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 Z" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrowDb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#3b2f6e" stroke-opacity="0.18" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <circle cx="1100" cy="100" r="220" fill="#7c3aed" fill-opacity="0.08"/>
+  <circle cx="120" cy="540" r="200" fill="#22d3ee" fill-opacity="0.05"/>
+
+  <text x="600" y="58" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#f3f4f6">Adaptive Hashing &#8212; Event-Driven File Integrity Monitoring</text>
+  <text x="600" y="86" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="15" fill="#a1a1aa">M.Tech Thesis &#183; IIT Patna &#183; Research Paper Submitted</text>
+
+  <g transform="translate(90, 140)">
+    <rect width="240" height="180" rx="14" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="20" y="34" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700" fill="#a78bfa" letter-spacing="0.12em">STAGE 1</text>
+    <text x="20" y="62" font-family="-apple-system, system-ui, sans-serif" font-size="19" font-weight="700" fill="#f3f4f6">Filesystem Events</text>
+    <line x1="20" y1="78" x2="220" y2="78" stroke="#a78bfa" stroke-opacity="0.25"/>
+    <text x="20" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#e5e7eb">inotify</text>
+    <text x="120" y="102" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#94a3b8">&#8212; Linux</text>
+    <text x="20" y="122" font-family="ui-monospace, monospace" font-size="12" fill="#e5e7eb">FSEvents</text>
+    <text x="120" y="122" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#94a3b8">&#8212; macOS</text>
+    <text x="20" y="142" font-family="ui-monospace, monospace" font-size="12" fill="#e5e7eb">RDCW</text>
+    <text x="120" y="142" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#94a3b8">&#8212; Windows</text>
+    <text x="20" y="166" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#a1a1aa">kernel-level change subscriptions</text>
+  </g>
+
+  <line x1="340" y1="230" x2="362" y2="230" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(370, 140)">
+    <rect width="240" height="180" rx="14" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="20" y="34" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700" fill="#a78bfa" letter-spacing="0.12em">STAGE 2</text>
+    <text x="20" y="62" font-family="-apple-system, system-ui, sans-serif" font-size="19" font-weight="700" fill="#f3f4f6">Metadata Filter</text>
+    <line x1="20" y1="78" x2="220" y2="78" stroke="#a78bfa" stroke-opacity="0.25"/>
+    <text x="20" y="102" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">drop unchanged files</text>
+    <text x="20" y="122" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">cheap stat() probe</text>
+    <text x="20" y="142" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">noise / churn dedup</text>
+    <text x="20" y="166" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#a1a1aa">size &#183; mtime &#183; ctime &#183; inode delta</text>
+  </g>
+
+  <line x1="620" y1="230" x2="642" y2="230" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(650, 140)">
+    <rect width="240" height="180" rx="14" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="20" y="34" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700" fill="#a78bfa" letter-spacing="0.12em">STAGE 3</text>
+    <text x="20" y="62" font-family="-apple-system, system-ui, sans-serif" font-size="19" font-weight="700" fill="#f3f4f6">Streaming SHA-256</text>
+    <line x1="20" y1="78" x2="220" y2="78" stroke="#a78bfa" stroke-opacity="0.25"/>
+    <text x="20" y="102" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">chunked io.Reader pipe</text>
+    <text x="20" y="122" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">rolling hash, ~8 KB buffer</text>
+    <text x="20" y="142" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">never loads file in RAM</text>
+    <text x="20" y="166" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#a1a1aa">cryptographic file fingerprint</text>
+  </g>
+
+  <line x1="900" y1="230" x2="922" y2="230" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(930, 140)">
+    <rect width="240" height="180" rx="14" fill="url(#cardAccent)" stroke="#f472b6" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="20" y="34" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700" fill="#f472b6" letter-spacing="0.12em">STAGE 4 &#183; ML</text>
+    <text x="20" y="62" font-family="-apple-system, system-ui, sans-serif" font-size="19" font-weight="700" fill="#f3f4f6">Isolation Forest</text>
+    <line x1="20" y1="78" x2="220" y2="78" stroke="#f472b6" stroke-opacity="0.35"/>
+    <text x="20" y="102" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">12 behavioural features</text>
+    <text x="20" y="122" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">unsupervised anomaly score</text>
+    <text x="20" y="142" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#e5e7eb">flags stealth tampering</text>
+    <text x="20" y="166" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#a1a1aa">defeats MITRE T1070.006</text>
+  </g>
+
+  <g transform="translate(400, 380)">
+    <rect width="400" height="86" rx="14" fill="url(#dbCard)" stroke="#94a3b8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <g transform="translate(28, 22)" fill="none" stroke="#94a3b8" stroke-width="2">
+      <ellipse cx="18" cy="8" rx="18" ry="6"/>
+      <path d="M 0 8 L 0 34 A 18 6 0 0 0 36 34 L 36 8"/>
+      <path d="M 0 20 A 18 6 0 0 0 36 20" stroke-opacity="0.6"/>
+    </g>
+    <text x="92" y="40" font-family="-apple-system, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f3f4f6">PostgreSQL Event Store</text>
+    <text x="92" y="62" font-family="-apple-system, system-ui, sans-serif" font-size="12" fill="#94a3b8">hashes &#183; feature vectors &#183; anomaly scores &#183; audit trail</text>
+  </g>
+
+  <path d="M 1050 320 L 1050 360 L 800 360 L 800 380" fill="none" stroke="#94a3b8" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowDb)"/>
+  <path d="M 770 320 L 770 360 L 400 360 L 400 380" fill="none" stroke="#94a3b8" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+  <g transform="translate(0, 500)">
+    <g transform="translate(120, 0)">
+      <rect width="280" height="70" rx="35" fill="#1e1b3f" fill-opacity="0.85" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="1.5"/>
+      <text x="140" y="34" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="26" font-weight="800" fill="#fbbf24">~2,000&#215;</text>
+      <text x="140" y="56" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="12" fill="#e5e7eb">fewer hash computations vs full-scan</text>
+    </g>
+    <g transform="translate(460, 0)">
+      <rect width="280" height="70" rx="35" fill="#1e1b3f" fill-opacity="0.85" stroke="#34d399" stroke-opacity="0.55" stroke-width="1.5"/>
+      <text x="140" y="34" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="26" font-weight="800" fill="#34d399">&lt; 5 s</text>
+      <text x="140" y="56" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="12" fill="#e5e7eb">detection on a 10 M-file server</text>
+    </g>
+    <g transform="translate(800, 0)">
+      <rect width="280" height="70" rx="35" fill="#1e1b3f" fill-opacity="0.85" stroke="#60a5fa" stroke-opacity="0.55" stroke-width="1.5"/>
+      <text x="140" y="34" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="26" font-weight="800" fill="#60a5fa">~50 MB</text>
+      <text x="140" y="56" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="12" fill="#e5e7eb">constant memory footprint</text>
+    </g>
+  </g>
+</svg>

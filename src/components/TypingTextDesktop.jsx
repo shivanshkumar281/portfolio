@@ -59,13 +59,13 @@ const TypingTextDesktop = () => {
             }}
             onInit={(typewriter) => {
               typewriter
-                .typeString("→ To build performant, scalable full-stack applications.\n")
-                .typeString("→ To master system design from low-level to high-level architecture.\n")
-                .typeString("→ To contribute to open-source and developer communities.\n")
-                .typeString("→ To refine DSA skills through coding challenges.\n")
-                .typeString("→ To work in fast-paced, innovation-driven environments.\n")
-                .typeString("→ To explore and adapt to new tools, frameworks, and technologies.\n")
-                .typeString("→ To lead and architect impactful software solutions in the future.")
+                .typeString("→ To ship production-grade backend systems in Go and Python on Google Cloud.\n")
+                .typeString("→ To master distributed systems and large-scale system design end to end.\n")
+                .typeString("→ To strengthen DSA and algorithmic problem-solving through deliberate practice.\n")
+                .typeString("→ To contribute to high-leverage open-source and developer tooling.\n")
+                .typeString("→ To work in fast-paced, product-driven engineering teams.\n")
+                .typeString("→ To explore performance, reliability, and security engineering deeply.\n")
+                .typeString("→ To grow into an engineer who designs and owns impactful software at scale.")
                 .start();
             }}
           />

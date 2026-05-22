@@ -28,15 +28,20 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
+      console.log("Form submitted:", formData);
+      // NOTE: This EmailJS service/template/public-key belong to the original
+      // template author. Until you create your own EmailJS account and replace
+      // the IDs below, the destination address inside that template still
+      // controls where messages are delivered. Updating to_name/to_email here
+      // only helps if your own template uses those variables.
       await emailjs.send(
         "service_lrd7n7u",
         "template_hwl33eu",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Shivansh",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "shivansh_2411cs20@iitp.ac.in",
           message: formData.message,
         },
         "xGqB8PdZMd4XddDrC"
